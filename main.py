@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 import hydralit_components as hc
 from cipher import *
 
