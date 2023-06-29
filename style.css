@@ -1,26 +1,3 @@
-/* .css-1rvyln1{
-  width: 10%;
-} */
-header {
-  visibility: visible;
-}
-.css-1rvyln1{
-  display: flex;
-  width: auto;
-}
-.stNumberInput {
-  width: auto !important;
-}
-.css-zxoj4z {
-  width: fit-content;
-}
-
-.css-k3w14i{
-  width: fit-content;
-}
-.css-400l48 {
-  width: fit-content;
-}
 div[data-testid="metric-container"]{
   background-color: #000000 !important;
   border: 1px solid #CCC;
@@ -29,9 +6,12 @@ div[data-testid="metric-container"]{
   border-left: 0.5rem solid #ff0000 !important;
   box-shadow: none !important;
 }
-
 .css-1wivap2 {
   white-space: normal;
   overflow-wrap: anywhere;
   text-align: justify;
+}
+.css-zt5igj{
+  text-align: center;
+  padding: 0;
 }

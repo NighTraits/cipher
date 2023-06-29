@@ -80,13 +80,16 @@ def Ceasar_Decipher(text, jmp):
     return resultado
 '''
 # code
-app = hy.HydraApp(title='Simple Multi-Page App')
+
+st.header('Parcial No.3')
+st.header('Exploración de Herramientas de Criptografía')
+app = hy.HydraApp(title='Parcial No.3')
 @app.addapp()
 def Encriptar():
     input1, input2, input3 = st.columns([2, 1, 1])
     msg = input1.text_input('Mensaje a encriptar')
-    ceasarJmp = input2.number_input('Saltos Cesar', min_value=0, max_value=10, value=0, step=1)
-    octalJmp = input3.number_input('Saltos OctalCode', min_value=0, max_value=10, value=0, step=1)
+    ceasarJmp = input2.number_input('Saltos Cesar', min_value=0, max_value=10, value=4, step=1)
+    octalJmp = input3.number_input('Saltos OctalCode', min_value=0, max_value=10, value=4, step=1)
     if msg and ceasarJmp>=0 and octalJmp>=0:
         ceasarCrypt = CeasarCipher(msg,ceasarJmp)
         octalCrypt = OctalCode(ceasarCrypt, octalJmp)
@@ -105,8 +108,8 @@ def Encriptar():
 def Desencriptar():
     input1, input2, input3 = st.columns([2, 1, 1])
     msgCrypt = input1.text_input('Mensaje a desencriptar')
-    ceasarJmp = input2.number_input('Saltos Cesar', min_value=0, max_value=10, value=0, step=1)
-    octalJmp = input3.number_input('Saltos OctalCode', min_value=0, max_value=10, value=0, step=1)
+    ceasarJmp = input2.number_input('Saltos Cesar', min_value=0, max_value=10, value=4, step=1)
+    octalJmp = input3.number_input('Saltos OctalCode', min_value=0, max_value=10, value=4, step=1)
     if msgCrypt and ceasarJmp>=0 and octalJmp>=0:
         ceasarDecrypt = Octal_Decipher_To_Ceasar(msgCrypt, octalJmp)
         msgDecrypt = Ceasar_Decipher(ceasarDecrypt, ceasarJmp)
